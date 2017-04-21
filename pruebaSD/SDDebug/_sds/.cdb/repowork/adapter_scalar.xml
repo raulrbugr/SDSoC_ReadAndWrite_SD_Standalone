@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:repository xmlns:xd="http://www.xilinx.com/xd" xd:vendor="xilinx.com" xd:library="ip" xd:name="adapter_scalar" xd:version="1.0">
+    <xd:component xd:vendor="xilinx.com" xd:library="ip" xd:name="adapter_scalar" xd:version="1.0">
+        <xd:busInterface xd:name="control" xd:busTypeRef="SDSoC_scalar_bus" xd:mode="slave"/>
+        <xd:port xd:name="inscalar0" xd:direction="out" xd:size="32"/>
+        <xd:port xd:name="inscalar1" xd:direction="out" xd:size="32"/>
+        <xd:port xd:name="inscalar2" xd:direction="out" xd:size="32"/>
+        <xd:port xd:name="inscalar3" xd:direction="out" xd:size="32"/>
+        <xd:port xd:name="inscalar4" xd:direction="out" xd:size="32"/>
+        <xd:port xd:name="inscalar5" xd:direction="out" xd:size="32"/>
+        <xd:port xd:name="inscalar6" xd:direction="out" xd:size="32"/>
+        <xd:port xd:name="inscalar7" xd:direction="out" xd:size="32"/>
+        <xd:port xd:name="outscalar0" xd:direction="in" xd:size="32"/>
+        <xd:port xd:name="outscalar1" xd:direction="in" xd:size="32"/>
+        <xd:port xd:name="outscalar2" xd:direction="in" xd:size="32"/>
+        <xd:port xd:name="outscalar3" xd:direction="in" xd:size="32"/>
+        <xd:port xd:name="outscalar4" xd:direction="in" xd:size="32"/>
+        <xd:port xd:name="outscalar5" xd:direction="in" xd:size="32"/>
+        <xd:port xd:name="outscalar6" xd:direction="in" xd:size="32"/>
+        <xd:port xd:name="outscalar7" xd:direction="in" xd:size="32"/>
+        <xd:port xd:name="outscalar0_vld" xd:direction="in"/>
+        <xd:port xd:name="outscalar1_vld" xd:direction="in"/>
+        <xd:port xd:name="outscalar2_vld" xd:direction="in"/>
+        <xd:port xd:name="outscalar3_vld" xd:direction="in"/>
+        <xd:port xd:name="outscalar4_vld" xd:direction="in"/>
+        <xd:port xd:name="outscalar5_vld" xd:direction="in"/>
+        <xd:port xd:name="outscalar6_vld" xd:direction="in"/>
+        <xd:port xd:name="outscalar7_vld" xd:direction="in"/>
+    </xd:component>
+</xd:repository>

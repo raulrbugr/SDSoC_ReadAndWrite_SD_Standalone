@@ -1,0 +1,50 @@
+(c) Copyright 2012-2016 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2016.2 SW Build on Jul 15 2016 19:20:29
+# Start time    : Fri Apr 21 19:20:24 +0200 2017
+# Command line  : sds++ -o pruebaSD.elf ./src/main.o -dmclkid 0 -target-os standalone -sds-pf {G:\zybo_hdmi_in}
+# Log file      : G:/pruebaSD/SDDebug/_sds/reports/sds.log
+# Journal file  : G:/pruebaSD/SDDebug/_sds/reports/sds.jou
+# Report file   : G:/pruebaSD/SDDebug/_sds/reports/sds.rpt
+#-----------------------------------------------------------
+
+# INFO: [SDSoC 0-0] Removing implementation files from previous run
+# INFO: [SDSoC 0-0] Analyzing object files
+arm-none-eabi-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo G:/pruebaSD/SDDebug/src/main.o G:/pruebaSD/SDDebug/_sds/.data/xdinfo.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata G:/pruebaSD/SDDebug/src/main.o G:/pruebaSD/SDDebug/_sds/.data/xddata.xml
+build_xd_ip_db  -sds-pf G:/zybo_hdmi_in/zybo_hdmi_in_hw.pfm    -o G:/pruebaSD/SDDebug/_sds/.cdb/xd_ip_db.xml  
+# INFO: [SDSoC 0-0] Using prebuilt hardware
+cd G:/pruebaSD/SDDebug
+# INFO: [SDSoC 0-0] Skipping block diagram (BD), address map, port information and device registration for partition 0
+cd G:/pruebaSD/SDDebug/_sds/swstubs
+cd G:/pruebaSD/SDDebug
+# INFO: [SDSoC 0-0] Prepare hardware access API functions
+cd G:/pruebaSD/SDDebug
+# INFO: [SDSoC 0-0] Create accelerator stub functions
+cd G:/pruebaSD/SDDebug/_sds/swstubs
+cd G:/pruebaSD/SDDebug
+cd G:/pruebaSD/SDDebug/_sds/swstubs
+# INFO: [SDSoC 0-0] Compile hardware access API functions
+arm-none-eabi-gcc  -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -I G:/zybo_hdmi_in/arm-xilinx-eabi/include  -I C:/Xilinx/SDSoC/2016.2/aarch32-none/include  -I C:/Xilinx/SDSoC/2016.2/Vivado_HLS/2016.2/include -c  G:/pruebaSD/SDDebug/_sds/swstubs/devreg.c
+arm-none-eabi-gcc   -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -I G:/zybo_hdmi_in/arm-xilinx-eabi/include  -I C:/Xilinx/SDSoC/2016.2/aarch32-none/include  -I C:/Xilinx/SDSoC/2016.2/Vivado_HLS/2016.2/include -c  G:/pruebaSD/SDDebug/_sds/swstubs/portinfo.c
+arm-none-eabi-g++  -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -I G:/zybo_hdmi_in/arm-xilinx-eabi/include  -I C:/Xilinx/SDSoC/2016.2/aarch32-none/include  -I C:/Xilinx/SDSoC/2016.2/Vivado_HLS/2016.2/include -c  G:/pruebaSD/SDDebug/_sds/swstubs/cf_stub.c
+arm-none-eabi-ar crs G:/pruebaSD/SDDebug/_sds/swstubs/libxlnk_stub.a G:/pruebaSD/SDDebug/_sds/swstubs/devreg.o G:/pruebaSD/SDDebug/_sds/swstubs/portinfo.o G:/pruebaSD/SDDebug/_sds/swstubs/cf_stub.o
+cd G:/pruebaSD/SDDebug/_sds/swstubs
+# INFO: [SDSoC 0-0] Compile accelerator stub functions
+cd G:/pruebaSD/SDDebug
+cd G:/pruebaSD/SDDebug/_sds/swstubs
+arm-none-eabi-ar crs G:/pruebaSD/SDDebug/_sds/swstubs/libpruebaSD.a G:/pruebaSD/SDDebug/_sds/swstubs/devreg.o G:/pruebaSD/SDDebug/_sds/swstubs/portinfo.o G:/pruebaSD/SDDebug/_sds/swstubs/cf_stub.o 
+cd G:/pruebaSD/SDDebug
+cd G:/pruebaSD/SDDebug/_sds/swstubs/standalone_bsp
+hsi -mode batch -notrace -quiet -source G:/pruebaSD/SDDebug/_sds/swstubs/standalone_bsp/create_bsp.tcl
+# INFO: [SDSoC 0-0] Create board support package library
+hsi -mode batch -notrace -quiet -source G:/pruebaSD/SDDebug/_sds/swstubs/standalone_bsp/create_bsp_post.tcl
+cd G:/pruebaSD/SDDebug
+# INFO: [SDSoC 0-0] Link application ELF file
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,--build-id=none -specs=C:/Xilinx/SDSoC/2016.2/data/toolchain/aarch32-none.spec -Wl,-T -Wl,G:/zybo_hdmi_in/arm-xilinx-eabi/lscript.ld   G:/pruebaSD/SDDebug/src/main.o G:/pruebaSD/SDDebug/_sds/swstubs/devreg.o G:/pruebaSD/SDDebug/_sds/swstubs/portinfo.o  -L G:/pruebaSD/SDDebug/_sds/swstubs/standalone_bsp/ps7_cortexa9_0/lib  -L C:/Xilinx/SDSoC/2016.2/aarch32-none/lib -LG:/pruebaSD/SDDebug/_sds/swstubs -Wl,--start-group -lxilffs -lgcc -lc -lstdc++ -Wl,--end-group -Wl,--start-group   -lxilffs -lxil -lgcc -lc  -lsds_lib -lxlnk_stub -lgcc -lc -Wl,--end-group -o G:/pruebaSD/SDDebug/_sds/swstubs/pruebaSD.elf
+arm-none-eabi-objcopy -R .xdinfo -R .xddata -R .xdasm -R .xdfcnmap -R .xdhlscore -R .xdif -R .xdparams -R .xdcore -R .xdsdata -R .xdpp G:/pruebaSD/SDDebug/_sds/swstubs/pruebaSD.elf
+cd G:/pruebaSD/SDDebug
+# INFO: [SDSoC 0-0] Enable generation of boot files
+# INFO: [SDSoC 0-0] Calling system_linker for partition 0
+system_linker -cf-input G:/pruebaSD/SDDebug/_sds/.llvm/apsys_0.xml -cf-output-dir _sds/p0 -ip-db G:/pruebaSD/SDDebug/_sds/.cdb/xd_ip_db.xml -ip-repo G:/pruebaSD/SDDebug/_sds/iprepo/repo -sds-pf G:/zybo_hdmi_in:standalone   -bit-name pruebaSD.elf.bit -boot-files   -target-os standalone -mdev-no-swgen -mdev-no-xsd -mdev-no-swgen -mdev-no-xsd -sdsoc -sd-output-dir _sds/p0/sd_card -bit-binary -elf G:/pruebaSD/SDDebug/_sds/swstubs/pruebaSD.elf
+# sds++ completed at Fri Apr 21 19:21:08 +0200 2017

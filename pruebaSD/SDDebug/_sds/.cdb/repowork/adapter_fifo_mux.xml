@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:repository xmlns:xd="http://www.xilinx.com/xd" xd:vendor="xilinx.com" xd:library="ip" xd:name="adapter_fifo_mux" xd:version="1.0">
+    <xd:component xd:vendor="xilinx.com" xd:library="ip" xd:name="adapter_fifo_mux" xd:version="1.0">
+        <xd:busInterface xd:name="CTRL_IN" xd:busTypeRef="SDSoC_fifo_ctrl" xd:mode="slave"/>
+        <xd:busInterface xd:name="CTRL_OUT0" xd:busTypeRef="SDSoC_fifo_ctrl" xd:mode="master"/>
+        <xd:busInterface xd:name="CTRL_OUT1" xd:busTypeRef="SDSoC_fifo_ctrl" xd:mode="master"/>
+        <xd:busInterface xd:name="CTRL_OUT2" xd:busTypeRef="SDSoC_fifo_ctrl" xd:mode="master"/>
+        <xd:busInterface xd:name="CTRL_OUT3" xd:busTypeRef="SDSoC_fifo_ctrl" xd:mode="master"/>
+        <xd:busInterface xd:name="CTRL_OUT4" xd:busTypeRef="SDSoC_fifo_ctrl" xd:mode="master"/>
+        <xd:busInterface xd:name="CTRL_OUT5" xd:busTypeRef="SDSoC_fifo_ctrl" xd:mode="master"/>
+        <xd:busInterface xd:name="CTRL_OUT6" xd:busTypeRef="SDSoC_fifo_ctrl" xd:mode="master"/>
+        <xd:busInterface xd:name="CTRL_OUT7" xd:busTypeRef="SDSoC_fifo_ctrl" xd:mode="master"/>
+    </xd:component>
+</xd:repository>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:repository xmlns:xd="http://www.xilinx.com/xd" xd:vendor="xilinx.com" xd:library="ip" xd:name="adapter_3p0" xd:version="1.0">
+    <xd:component xd:vendor="xilinx.com" xd:library="ip" xd:name="adapter_3p0" xd:version="1.0">
+        <xd:busInterface xd:name="S_AXI" xd:busTypeRef="aximm" xd:mode="slave" xd:clockRef="S_AXI_ACLK" xd:resetRef="S_AXI_ARESETN"/>
+        <xd:busInterface xd:name="S_AXI_ARESETN" xd:busTypeRef="reset" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="S_AXI_ARESETN"/>
+        <xd:busInterface xd:name="S_AXI_ACLK" xd:busTypeRef="clock" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="S_AXI_ACLK"/>
+        <xd:busInterface xd:name="ap_clk" xd:busTypeRef="clock" xd:mode="master" xd:direction="out" xd:library="signal" xd:port="ap_clk"/>
+        <xd:busInterface xd:name="FIFO" xd:busTypeRef="SDSoC_fifo_ctrl" xd:mode="master"/>
+        <xd:busInterface xd:name="AP_CTRL" xd:busTypeRef="acc_handshake" xd:mode="master" xd:clockPort="acc_clk"/>
+        <xd:busInterface xd:name="SCALAR" xd:busTypeRef="SDSoC_scalar_bus" xd:mode="master"/>
+        <xd:busInterface xd:name="acc_clk" xd:busTypeRef="clock" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="acc_clk"/>
+        <xd:busInterface xd:name="ap_rst" xd:busTypeRef="reset" xd:mode="master" xd:direction="out" xd:library="signal" xd:port="ap_rst"/>
+    </xd:component>
+</xd:repository>

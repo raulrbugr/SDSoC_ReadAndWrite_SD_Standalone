@@ -1,0 +1,23 @@
+(c) Copyright 2012-2016 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2016.2 SW Build on Jul 15 2016 19:20:29
+# Start time    : Fri Apr 21 19:20:24 +0200 2017
+# Command line  : sds++ -o pruebaSD.elf ./src/main.o -dmclkid 0 -target-os standalone -sds-pf {G:\zybo_hdmi_in}
+# Log file      : G:/pruebaSD/SDDebug/_sds/reports/sds.log
+# Journal file  : G:/pruebaSD/SDDebug/_sds/reports/sds.jou
+# Report file   : G:/pruebaSD/SDDebug/_sds/reports/sds.rpt
+#-----------------------------------------------------------
+
+-------------------
+Data Motion Network
+-------------------
+
+Data motion network report generated in G:/pruebaSD/SDDebug/_sds/reports
+
+-------------------
+Design Utilization
+-------------------
+
+  Partition 0
+  Utilization Summary : file not found : G:/pruebaSD/SDDebug/_sds/p0/ipi/zybo_hdmi_in.runs/impl_1/*_utilization_placed.rpt
+

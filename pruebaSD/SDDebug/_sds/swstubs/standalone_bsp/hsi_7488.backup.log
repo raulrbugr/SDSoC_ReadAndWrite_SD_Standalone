@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# hsi v2016.2 (64-bit)
+# SW Build 1597080 on Fri Jul  1 21:34:56 MDT 2016
+# 
+# Start of session at: Fri Apr 21 19:20:28 2017
+# Process ID: 7488
+# Current directory: G:/pruebaSD/SDDebug/_sds/swstubs/standalone_bsp
+# Command line: hsi.exe -mode batch -notrace -quiet -source G:/pruebaSD/SDDebug/_sds/swstubs/standalone_bsp/create_bsp.tcl
+# Log file: G:/pruebaSD/SDDebug/_sds/swstubs/standalone_bsp/hsi.log
+# Journal file: G:/pruebaSD/SDDebug/_sds/swstubs/standalone_bsp\hsi.jou
+#-----------------------------------------------------------
+INFO: [Hsi 55-1698] elapsed time for repository loading 0 seconds

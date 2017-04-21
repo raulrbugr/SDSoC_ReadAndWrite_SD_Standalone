@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:repository xmlns:xd="http://www.xilinx.com/xd" xd:vendor="xilinx.com" xd:library="user" xd:name="adapter_bram2axis" xd:version="1.0">
+    <xd:component xd:vendor="xilinx.com" xd:library="user" xd:name="adapter_bram2axis" xd:version="1.0">
+        <xd:busInterface xd:name="AXIS" xd:busTypeRef="axis" xd:mode="master" xd:direction="out" xd:hasTlast="true" xd:clockRef="AXIS_CLK" xd:resetRef=""/>
+        <xd:busInterface xd:name="AXIS_CLK" xd:busTypeRef="clock" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="AXIS_CLK"/>
+        <xd:busInterface xd:name="CTRL" xd:busTypeRef="SDSoC_fifo_ctrl" xd:mode="slave"/>
+        <xd:busInterface xd:name="BRAM" xd:busTypeRef="bram" xd:mode="master"/>
+        <xd:port xd:name="DATA_DEPTH" xd:direction="in" xd:size="32"/>
+    </xd:component>
+</xd:repository>

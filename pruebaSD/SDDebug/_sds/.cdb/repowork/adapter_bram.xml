@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:repository xmlns:xd="http://www.xilinx.com/xd" xd:vendor="xilinx.com" xd:library="user" xd:name="adapter_bram" xd:version="1.0">
+    <xd:component xd:vendor="xilinx.com" xd:library="user" xd:name="adapter_bram" xd:version="1.0">
+        <xd:busInterface xd:name="INPUT_BRAM" xd:busTypeRef="bram" xd:mode="slave"/>
+        <xd:busInterface xd:name="OUTPUT_BRAM" xd:busTypeRef="bram" xd:mode="slave"/>
+        <xd:busInterface xd:name="ACC_BRAM_0" xd:busTypeRef="bram" xd:mode="slave"/>
+        <xd:busInterface xd:name="ACC_BRAM_1" xd:busTypeRef="bram" xd:mode="slave"/>
+        <xd:port xd:name="CTRL_CLK" xd:direction="in"/>
+        <xd:port xd:name="CTRL_EN_INPUT_IF" xd:direction="in"/>
+        <xd:port xd:name="CTRL_EN_OUTPUT_IF" xd:direction="in"/>
+    </xd:component>
+</xd:repository>
